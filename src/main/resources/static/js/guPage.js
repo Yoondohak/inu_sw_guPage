@@ -450,7 +450,7 @@ function displayArea(coordinates, name, count1) {
     });
 
 
-
+    
     // 다각형에 mouseout 이벤트를 등록하고 이벤트가 발생하면 폴리곤의 채움색을 원래색으로 변경합니다
     // 커스텀 오버레이를 지도에서 제거합니다
     kakao.maps.event.addListener(polygon, 'mouseout', function() {
@@ -469,6 +469,62 @@ function displayArea(coordinates, name, count1) {
             }});
 
         deletePolygon(polygons);                    //폴리곤 제거
+
+        var markerLocations = [
+            { name: '마커1', lat: 37.551137, lng: 126.849485, content: '정보정보김수한무' },
+            { name: '마커2', lat: 37.545812, lng: 126.849151, content: '유비장비관우조자룡황충제갈량방통아왜그랬어' },
+            { name: '마커3', lat: 37.558409, lng: 126.838502, content: '안녕하세요' },
+            { name: '마커4', lat: 37.553281, lng: 126.831438, content: '졸려잉' },
+            { name: '마커5', lat: 37.546798, lng: 126.839616, content: '조조하후돈상남자음위나라굿' }
+            // Add more markers with their content
+        ];
+        
+        var markers = [];
+        var infowindows = [];
+        var lastClickedMarker = null;
+        
+        for (var i = 0; i < markerLocations.length; i++) {
+            var marker = new kakao.maps.Marker({
+                position: new kakao.maps.LatLng(markerLocations[i].lat, markerLocations[i].lng)
+            });
+            markers.push(marker);
+        
+            // Create an infowindow for each marker with custom styles
+            var infowindow = new kakao.maps.InfoWindow({
+                content: markerLocations[i].content,
+                position: new kakao.maps.LatLng(markerLocations[i].lat, markerLocations[i].lng),
+            });
+            infowindows.push(infowindow);
+        // Set custom styles for the infowindow
+    infowindow.setContent('<div style="min-width: 250px; min-height: 100px;">' + markerLocations[i].content + '</div>');
+
+            // Add a click event listener to each marker to open the infowindow
+            kakao.maps.event.addListener(marker, 'click', makeInfowindowEvent(infowindow, map, marker));
+        }
+        
+        // Add markers to the map
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+        }
+        
+        function makeInfowindowEvent(infowindow, map, marker) {
+            return function () {
+                if (infowindow === lastClickedMarker) {
+                    // If the clicked marker is the same as the last one, close it
+                    infowindow.close();
+                    lastClickedMarker = null;
+                } else {
+                    // Close the previously clicked marker's infowindow, if it exists
+                    if (lastClickedMarker) {
+                        lastClickedMarker.close();
+                    }
+        
+                    infowindow.open(map, marker);
+                    lastClickedMarker = infowindow;
+                }
+            };
+        } 
+        
     });
 }
 //centroid 알고리즘 (폴리곤 중심좌표 구하기 위함)
