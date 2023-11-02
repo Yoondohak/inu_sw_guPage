@@ -283,7 +283,7 @@ function displayArea(coordinates, name, count1) {
             fillColor = '#990000'; // Blue for 은평구
         }  else if (name === "강동구") {
             fillColor = '#ED0000'; // Blue for 은평구
-        }
+        } 
     } else if(count1 == 4) {
         if (name === "종로구") {
             fillColor = '#EA0000'; // Red for 강서구
@@ -544,7 +544,6 @@ function centroid (points) {
     }
     return new kakao.maps.LatLng(x / area, y / area);
 }
-
 //지도 위 표시되고 있는 폴리곤 제거
 function deletePolygon(polygons) {
     for (var i = 0; i < polygons.length; i++) {
