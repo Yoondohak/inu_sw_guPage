@@ -471,11 +471,11 @@ function displayArea(coordinates, name, count1) {
         deletePolygon(polygons);                    //폴리곤 제거
 
         var markerLocations = [
-            { name: '마커1', lat: 37.551137, lng: 126.849485, content: '정보정보김수한무' },
-            { name: '마커2', lat: 37.545812, lng: 126.849151, content: '유비장비관우조자룡황충제갈량방통아왜그랬어' },
-            { name: '마커3', lat: 37.558409, lng: 126.838502, content: '안녕하세요' },
-            { name: '마커4', lat: 37.553281, lng: 126.831438, content: '졸려잉' },
-            { name: '마커5', lat: 37.546798, lng: 126.839616, content: '조조하후돈상남자음위나라굿' }
+            { name: '마커1', lat: 37.551137, lng: 126.849485, content: '마커1' },
+            { name: '마커2', lat: 37.545812, lng: 126.849151, content: '마커2마커2마커2마커2마커2마커2마커2마커2' },
+            { name: '마커3', lat: 37.558409, lng: 126.838502, content: '마커3' },
+            { name: '마커4', lat: 37.553281, lng: 126.831438, content: '마커4' },
+            { name: '마커5', lat: 37.546798, lng: 126.839616, content: '마커4' }
             // Add more markers with their content
         ];
         
