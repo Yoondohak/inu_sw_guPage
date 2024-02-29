@@ -1,0 +1,154 @@
+/* r_main_page.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3';
+    background-color: #e5eafc;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%; /* Adjust padding as needed */
+    background-color: royalblue; /* Adjust the background color as needed */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    font-family: 'Source Sans 3';
+    font-size: 180%;
+}
+
+.logo a {
+    text-decoration: none;
+    color: aliceblue;/* Adjust the text color as needed */
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.main__menu,
+.main__icons {
+    font-size: 120%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.main__menu li,
+.main__icons li {
+    margin-right: 20px;
+}
+
+.main__menu a,
+.main__icons a {
+    text-decoration: none;
+    color: aliceblue; /* Adjust the text color as needed */
+}
+
+.above-text,
+.below1-text,
+.below2-text {
+    font-family: 'Source Sans 3';
+    text-align: center;
+    font-weight: bold;
+    color: rgb(5, 31, 54); /* Adjust the text color as needed */
+}
+
+.above-text {
+    text-align: center;
+    font-size: 400%; /* Adjust the font size as needed */
+    margin: 0; /* Adjust the margin as needed */
+}
+
+.below1-text {
+    text-align: center;
+    color:rgb(5, 31, 54);
+    margin: 0;
+    font-size: 250%; /* Adjust the font size as needed */
+}
+.below2-text {
+    text-align: center;
+    color: rgb(52, 86, 113);
+    line-height: 1.8; /* Adjust the line height as needed */
+    margin-bottom: 20px;
+    font-size: 150%; /* Adjust the font size as needed */
+}
+
+
+/* Add this to style the image container */
+.image-container {
+    position: relative;
+}
+
+/* Add this to set the width and height of the image */
+.menu-image {
+    width: 100%;
+    height: 70%;
+}
+
+/* ... (previous styles) */
+
+.additional-text-container {
+    padding :0.1%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin: 30px; /* Adjust the margin-top as needed */
+}
+
+.first-section {
+    font-weight: bold;
+    color: rgb(215, 65, 77); 
+    font-size: 200%; /* Adjust the font size as needed for the larger text */
+    margin-bottom: 5%; /* Adjust the margin-bottom for spacing between elements */
+}
+
+.second-section{
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5%;
+    color:rgb(0, 22, 54);
+    font-size: 170%; /* Adjust the font size as needed for the larger text */
+    margin-bottom: 5px; 
+}
+
+
+.seoul-text {
+    color: rgb(215, 65, 77); 
+}
+
+.third-section {
+    font-weight: bold;
+    text-align: left;
+    margin-left: 7%;
+    color:rgb(5, 31, 54);
+    font-size: 100%; /* Adjust the font size as needed for the larger text */
+    margin-top: 5px;
+}
+
+.bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: royalblue; /* Adjust the background color as needed */
+    padding: 1%; /* Adjust padding as needed */
+    margin-top: 5%;
+}
+
+.bottom-section a {
+    font-size: 150%; /* Adjust the font size as needed for the icons */
+    margin: 0 10px; /* Adjust the margin as needed for spacing between icons */
+}
+
+/* ... (remaining styles) */
+
